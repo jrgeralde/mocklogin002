@@ -24,12 +24,12 @@ export default function Login() {
     const password = passwordRef.current?.value || '';
 
     if (username === 'admin' && password === '123') {
-      sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('isLoggedIn', 'true'); // save login status to session storage
       setIsLoggedIn(true);
      // setMessage('Welcome, Admin!');
 
       // Dispatch event to notify other components immediately
-      window.dispatchEvent(new Event('mock-auth-change'));
+     // window.dispatchEvent(new Event('mock-auth-change'));
 
       router.push('/dashboard');
     } else if (username !== 'admin') {

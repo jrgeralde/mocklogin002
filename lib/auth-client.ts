@@ -31,7 +31,7 @@ export function useSession(): SessionData {
          setSession({
           user: {
             id: 'mock-admin-id',
-            name: 'Admin User'
+            name: 'admin'
           }
         });
       } else {
@@ -47,13 +47,13 @@ export function useSession(): SessionData {
     };
 
     // Listen for custom event (same tab) and storage event (cross-tab)
-    window.addEventListener('mock-auth-change', handleAuthChange);
-    window.addEventListener('storage', handleAuthChange);
+   // window.addEventListener('mock-auth-change', handleAuthChange);
+   // window.addEventListener('storage', handleAuthChange);
 
-    return () => {
-      window.removeEventListener('mock-auth-change', handleAuthChange);
-      window.removeEventListener('storage', handleAuthChange);
-    };
+    //return () => {
+    //  window.removeEventListener('mock-auth-change', handleAuthChange);
+    //  window.removeEventListener('storage', handleAuthChange);
+    //};
   }, []);
 
   return { data: session, isPending };

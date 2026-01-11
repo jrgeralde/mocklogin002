@@ -12,7 +12,7 @@ export default function LoginPageGuard({ children }: { children: React.ReactNode
   useEffect(() => {
     const checkAuth = async () => {
       // Check if user is logged in
-      const loggedIn = isLoggedIn();
+      const loggedIn = isLoggedIn(); // from lib/auth-client.ts which checks the login status from session storage
 
       if (!loggedIn) {
         await showMessage('You must be logged in to view this page.', { okColor: 'bg-red-600 hover:bg-red-700' });

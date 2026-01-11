@@ -1,3 +1,4 @@
+// app/dashboard/layout.tsx
 import Header, { Footer } from './headerfooter';
 
 import React from 'react';
